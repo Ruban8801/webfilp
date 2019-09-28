@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet">
+    <title>Css grid</title>
+<style>
+.flip{
+  width:240px;
+  height:200px;
+  margin:10px;
+  float:left;
+}
+.flip > .front{
+    position: absolute;
+    transform: perspective(600px)rotateY(0deg);
+    background: #FC0;
+    width:240px;
+    height:200px;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 5s;
+
+}
+.flip > .back{
+    position: absolute;
+    transform: perspective(600px)rotateY(0deg);
+    background: pink;
+    width:240px;
+    height:200px;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 5s linear 0s;
+
+}
+.flip:hover > .front{
+   transform:perspective(600px) rotateY(-180deg);
+}
+.flip:hover > .back{
+    transform:perspective(600px) rotateY(0deg);
+ }
+ 
+
+
+</style>  
+</head>
+  <body>
+<div class="flip">
+  <div class="back">Box -1 -Back</div>
+  <div class="front">Box-1 -front</div>
+</div>
+<div class="flip">
+
+    <div class="back">Box -2 -Back</div>
+    <div class="front">Box-2 -front</div>
+  </div>
+  <div class="flip">
+      <div class="back">Box -3 -Back</div>
+      <div class="front">Box-3 -front</div>
+    </div>
+      
+
+
+
+  </body> 
+ </html>
